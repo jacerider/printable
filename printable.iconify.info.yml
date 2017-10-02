@@ -1,0 +1,5 @@
+# Base iconify_info plugin definitions.
+# Plugin property $defaults are defined in IconifyInfoManager.
+print:
+  text: print
+  icon: fa-print

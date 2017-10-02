@@ -1,0 +1,12 @@
+printable:
+  version: VERSION
+  js:
+    js/printable.js: {}
+  css:
+    component:
+      css/printable.css: {}
+      css/printable.print.css: { media: print }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

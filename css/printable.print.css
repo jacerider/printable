@@ -1,0 +1,11 @@
+.printable-body {
+  margin-top: 0 !important;
+}
+
+.printable-close {
+  display: none !important;
+}
+
+.printable-no-break {
+  page-break-inside: avoid;
+}

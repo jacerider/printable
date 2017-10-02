@@ -1,0 +1,12 @@
+services:
+  printable.printable_renderer:
+    class: Drupal\printable\PrintableRenderer
+    arguments: ['@title_resolver', '@plugin.manager.display_variant', '@event_dispatcher', '@module_handler', '@renderer', '@render_cache', '%renderer.config%']
+    # arguments: ['@title_resolver', '@renderer']
+    tags:
+      - { name: render.main_content_renderer, format: drupal_printable}
+  printable.view_subscriber:
+    class: Drupal\printable\PrintableViewSubscriber
+    arguments: ['@class_resolver', '@current_route_match', '%main_content_renderers%']
+    tags:
+      - { name: event_subscriber }
